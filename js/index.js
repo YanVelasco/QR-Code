@@ -14,7 +14,7 @@ function generateQRCode() {
     QRCodeIMG.style.visibility = "visible";
 
     if ( QRCodeIMG.style.visibility = "visible") {
-        qrCodeBTN.innerHTML = "QR Code gerado abaixo:"
+        qrCodeBTN.innerHTML = "QR Code gerado abaixo:";
     }
 
     QRCodeIMG.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${QRCodeInputValue}`;
@@ -27,3 +27,9 @@ function generateQRCode() {
 qrCodeBTN.addEventListener("click", () => {
     generateQRCode();
 })
+
+QRCodeInput.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+        generateQRCode();
+    }
+});
