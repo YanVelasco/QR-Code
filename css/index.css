@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #34db7a;
+}
+
+#container-QRcode{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    height: 250px;
+}
+
+#container-QRcode input{
+    padding: .5rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+#container-QRcode button{
+    background: #34db7a;
+    border: 0;
+    border-radius: 1rem; 
+    width: 100%;   
+    padding: 1rem;
+
+}
+
+#container-QRcode button:hover{
+    cursor: pointer;
+    color: #2e6745;
+}
+
+#container-QRcode.active {
+    height: 550px;
+}
+
+
+#qr-code {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    visibility: hidden; /* Mantenha como hidden inicialmente */
+    transition: 0.5s;
+}
+
+#container-QRcode .active .qr-code{
+    visibility: visible;
+}
