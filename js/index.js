@@ -13,6 +13,10 @@ function generateQRCode() {
 
     QRCodeIMG.style.visibility = "visible";
 
+    if ( QRCodeIMG.style.visibility = "visible") {
+        qrCodeBTN.innerHTML = "QR Code gerado abaixo:"
+    }
+
     QRCodeIMG.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${QRCodeInputValue}`;
 
     containerQRCode.classList.add("active")
